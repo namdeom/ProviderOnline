@@ -14,7 +14,7 @@ export class latlagfromaddresscomponent implements OnInit {
 
     getGeoLocation(lat: number, lng: number) {
        this._glocationservice.getGeoLocation(lat,lng);
-    };
+    } ;
 
     getGeoLocationFromAddress(address : string) {
         this._glocationservice.getGeoLocationFromAddress(address);
