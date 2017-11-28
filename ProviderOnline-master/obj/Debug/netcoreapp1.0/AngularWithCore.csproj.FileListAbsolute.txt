@@ -1,0 +1,3 @@
+C:\Users\manmo\Documents\Project\SelfProject\AngularWithCore\bin\Debug\netcoreapp1.0\AngularWithCore.deps.json
+C:\Users\manmo\Documents\Project\SelfProject\AngularWithCore\bin\Debug\netcoreapp1.0\AngularWithCore.runtimeconfig.json
+C:\Users\manmo\Documents\Project\SelfProject\AngularWithCore\bin\Debug\netcoreapp1.0\AngularWithCore.runtimeconfig.dev.json
