@@ -13,6 +13,6 @@ export class defaultpagecomponent implements OnInit {
 
     ngOnInit() {
          var rtl = false; // Use RTL
-         custom.prototype.initializeOwl( rtl );
+         custom.prototype.initializeOwl(rtl);
      }
 }
