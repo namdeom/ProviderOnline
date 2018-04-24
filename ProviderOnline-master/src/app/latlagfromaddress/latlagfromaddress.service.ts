@@ -132,19 +132,20 @@ getGeoLocationFromAddress_Old(address: string)
 
        getWithPromise() {
             let apiURL = AUTH_CONFIG.baseUri + 'api/ProviderMasters';
-            let promise = new Promise((resolve, reject) => {
-            this.http.get(apiURL)
-                .toPromise()
-                .then(
-                    res => { // Success
-                        this.results = res.json();
-                        resolve(this.results);
-                    },
-                    msg => { // Error
-                        reject(msg);
-                    }
-                );
-            });
+            let promise = new Promise((resolve, reject) => 
+                            {
+                                this.http.get(apiURL)
+                                .toPromise()
+                                .then(
+                                    res => { // Success
+                                        this.results = res.json();
+                                        resolve(this.results);
+                                    },
+                                    msg => { // Error
+                                        reject(msg);
+                                    }
+                                );
+                            });
             return promise;
         };
 
