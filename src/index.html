@@ -55,7 +55,7 @@ window.onload = function(){
             navigator.geolocation.getCurrentPosition(function(position){ 
                     //console.log("Found your location \nLat : "+position.coords.latitude+" \nLang :"+ position.coords.longitude);
             //this.http.get(AUTH_CONFIG.baseUri + 'api/ProviderDetails').map(response=> response.json())
-            $.get('http://localhost:61148/api/Providerdetails')
+            //$.get('http://localhost:61148/api/Providerdetails')
             $.getJSON(jsonPath)
             .done(function(json) {
                 var m = {
