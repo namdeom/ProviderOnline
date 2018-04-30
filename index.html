@@ -111,7 +111,8 @@
                                     "last_review_rating": 5
                                 }]
                             };
-                            console.log(m.data[0].typeIcon);
+                            console.log(m.data[0].id);
+                            console.log(m.data[0].type_icon);
                             createHomepageGoogleMap(51.541599, -0.112588, m);
                         })
                         .fail(function (jqxhr, textStatus, error) {
