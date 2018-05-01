@@ -185,26 +185,7 @@ $(document).ready(function($) {
         //alert( $(this).attr('href') );
         if ( attr.indexOf('#') != 0 ) {
             e.preventDefault();
-            // var goTo = this.getAttribute("href");
-            // $('body').removeClass('page-fade-in');
-            // $('body').addClass('page-fade-out');
-            // setTimeout(function(){
-            //     window.location = goTo;
-            // },200);
-                var _latitude = 51.541216;
-                var _longitude = -0.095678;
-                var jsonPath = 'assets/json/real-estate.json';
-
-                // Load JSON data and create Google Maps
-
-                $.getJSON(jsonPath)
-                        .done(function(json) {
-                            createHomepageGoogleMap(_latitude,_longitude,json);
-                        })
-                        .fail(function( jqxhr, textStatus, error ) {
-                            console.log(error);
-                        })
-                ;       
+            getCurrentLocation();
         }
         else if ( $(this).attr('href') == '#' ) {
             e.preventDefault();
@@ -587,6 +568,6 @@ function adaptBackgroundHeight(){
         }
     });
 
-
+    
 
 }

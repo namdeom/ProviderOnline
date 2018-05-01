@@ -1151,7 +1151,57 @@
             "last_review": "Curabitur odio nibh, luctus non pulvinar a, ultricies ac diam. Donec neque massa, viverra interdum eros ut, imperdiet",
             "last_review_rating": 5
         }
-
+        ,
+        {
+            "id": 24,
+            "category": "real_estate",
+            "title": "3295 Valley Street",
+            "location": "Collingswood",
+            "latitude": 32.97524980000001,
+            "longitude": -96.8453271,
+            "url": "real-estate-item-detail.html",
+            "type": "Apartment",
+            "type_icon": "assets/icons/real-estate/apartment-3.png",
+            "rating": 4,
+            "gallery":
+                [
+                    "assets/img/items/real-estate/6.jpg",
+                    "assets/img/items/real-estate/5.jpg",
+                    "assets/img/items/real-estate/4.jpg"
+                ],
+            "features":
+                [
+                    "Air Conditioning",
+                    "Balcony",
+                    "Bedding",
+                    "Cable TV",
+                    "Dishwasher",
+                    "Family Room",
+                    "Fireplace",
+                    "Grill",
+                    "Outdoor Kitchen",
+                    "Sauna",
+                    "Trees and Landscaping"
+                ],
+            "date_created": "2014-11-03",
+            "price": "$42.000",
+            "featured": 0,
+            "color": "",
+            "person_id": 1,
+            "year": 1980,
+            "special_offer": 0,
+            "item_specific":
+                {
+                    "bedrooms": 2,
+                    "bathrooms": 2,
+                    "rooms": 4,
+                    "garages": 1,
+                    "area": 240
+                },
+            "description": "Curabitur odio nibh, luctus non pulvinar a, ultricies ac diam. Donec neque massa, viverra interdum eros ut, imperdiet pellentesque mauris. Proin sit amet scelerisque risus. Donec semper semper erat ut mollis. Curabitur suscipit, justo eu dignissim lacinia, ante sapien pharetra duin consectetur eros augue sed ex. Donec a odio rutrum, hendrerit sapien vitae, euismod arcu.",
+            "last_review": "Curabitur odio nibh, luctus non pulvinar a, ultricies ac diam. Donec neque massa, viverra interdum eros ut, imperdiet",
+            "last_review_rating": 5
+        }
 
     ]
 }
