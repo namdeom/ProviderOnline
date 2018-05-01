@@ -13,7 +13,7 @@ const appRoutes: Routes = [
   { path: 'DefaultPage',    component: defaultpagecomponent },
   { path: 'DetailsPage',    component: detailspagecomponent },
   { path: 'UpdateAddress',    component: latlagfromaddresscomponent },
-  { path: '',    component: detailspagecomponent },
+  { path: '',    component: defaultpagecomponent },
   { path: '**', component: pagenotfoundcomponent }
 ];
 
