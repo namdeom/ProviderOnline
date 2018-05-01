@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
   <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
@@ -43,11 +43,50 @@
 <script type="text/javascript" src="assets/js/jquery.nouislider.all.min.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
 <script type="text/javascript" src="assets/js/maps.js"></script>
-<script type="text/javascript" src="assets/js/defaultscript.js"></script>
-
 <!--AIzaSyAf9w-hbg732A2Hi9XMQKWU0p1fFodo22o;
     AgmCoreModule.forRoot({apiKey:'AIzaSyCLSAVnSsuaswd1pV2aoKvBXuearz0F7g0'})-->
   
+<script>
+    var jsonPath = 'assets/json/real-estate.json';
+
+window.onload = function(){ 
+    if ("geolocation" in navigator){ //check geolocation available 
+            //try to get user current location using getCurrentPosition() method
+            navigator.geolocation.getCurrentPosition(function(position){ 
+                    //console.log("Found your location \nLat : "+position.coords.latitude+" \nLang :"+ position.coords.longitude);
+            //this.http.get(AUTH_CONFIG.baseUri + 'api/ProviderDetails').map(response=> response.json())
+            $.get('http://localhost:61148/api/Providerdetails')
+            $.getJSON(jsonPath)
+            .done(function(json) {
+                var m = {
+                "data":[json]
+            };
+            console.log(m.data[0].typeIcon);
+                createHomepageGoogleMap(position.coords.latitude,position.coords.longitude,m);
+            })
+            .fail(function( jqxhr, textStatus, error ) {
+                console.log(error);
+            })
+            ;
+                });
+        }else{
+            console.log("Browser doesn't support geolocation!");
+        }
+ };
+
+
+            
+
+    // Set if language is RTL and load Owl Carousel
+
+    $(window).load(function(){
+        var rtl = false; // Use RTL
+        initializeOwl(rtl);
+    });
+
+    autoComplete();
+
+</script>
   <app-root>Loading...</app-root>
 </body>
 </html>

@@ -181,30 +181,30 @@ $(document).ready(function($) {
     //$('body').addClass('page-fade-in');
 
     $('a').on('click', function (e) {
-    var jsonPath = 'assets/json/real-estate.json';
-    var attr = $(this).attr('href');
+        var attr = $(this).attr('href');
         //alert( $(this).attr('href') );
         if ( attr.indexOf('#') != 0 ) {
             e.preventDefault();
-            if ("geolocation" in navigator){ //check geolocation available 
-            //try to get user current location using getCurrentPosition() method
-            navigator.geolocation.getCurrentPosition(function(position){ 
-            //console.log("Found your location \nLat : "+position.coords.latitude+" \nLang :"+ position.coords.longitude);
-            //this.http.get(AUTH_CONFIG.baseUri + 'api/ProviderDetails').map(response=> response.json())
-            //$.get('http://localhost:61148/api/Providerdetails')
+            // var goTo = this.getAttribute("href");
+            // $('body').removeClass('page-fade-in');
+            // $('body').addClass('page-fade-out');
+            // setTimeout(function(){
+            //     window.location = goTo;
+            // },200);
+                var _latitude = 51.541216;
+                var _longitude = -0.095678;
+                var jsonPath = 'assets/json/real-estate.json';
+
+                // Load JSON data and create Google Maps
+
                 $.getJSON(jsonPath)
-                .done(function(data) {
-                    console.log(data.data[0].category);
-                    createHomepageGoogleMap(position.coords.latitude,position.coords.longitude,data);
-                })
-                .fail(function( jqxhr, textStatus, error ) {
-                    console.log(error);
-                })
-                ;
-                });
-        }else{
-            console.log("Browser doesn't support geolocation!");
-        }
+                        .done(function(json) {
+                            createHomepageGoogleMap(_latitude,_longitude,json);
+                        })
+                        .fail(function( jqxhr, textStatus, error ) {
+                            console.log(error);
+                        })
+                ;       
         }
         else if ( $(this).attr('href') == '#' ) {
             e.preventDefault();
@@ -587,6 +587,6 @@ function adaptBackgroundHeight(){
         }
     });
 
-    
+
 
 }
