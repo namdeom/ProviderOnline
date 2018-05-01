@@ -61,8 +61,8 @@ window.onload = function(){
                 var m = {
                 "data":[json]
             };
-            console.log(m.data[0].typeIcon);
-                createHomepageGoogleMap(position.coords.latitude,position.coords.longitude,m);
+            console.log(json.data[0]);
+                createHomepageGoogleMap(position.coords.latitude,position.coords.longitude,json);
             })
             .fail(function( jqxhr, textStatus, error ) {
                 console.log(error);
