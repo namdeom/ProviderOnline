@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
   <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
@@ -55,14 +55,14 @@ window.onload = function(){
             navigator.geolocation.getCurrentPosition(function(position){ 
                     //console.log("Found your location \nLat : "+position.coords.latitude+" \nLang :"+ position.coords.longitude);
             //this.http.get(AUTH_CONFIG.baseUri + 'api/ProviderDetails').map(response=> response.json())
-            $.get('http://localhost:61148/api/Providerdetails')
+            //$.get('http://localhost:61148/api/Providerdetails')
             $.getJSON(jsonPath)
             .done(function(json) {
                 var m = {
                 "data":[json]
             };
-            console.log(m.data[0].typeIcon);
-                createHomepageGoogleMap(position.coords.latitude,position.coords.longitude,m);
+            console.log(json.data[0]);
+                createHomepageGoogleMap(position.coords.latitude,position.coords.longitude,json);
             })
             .fail(function( jqxhr, textStatus, error ) {
                 console.log(error);
